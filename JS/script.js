@@ -1,5 +1,5 @@
 const postList = document.querySelector(".posts-list");
-
+const addWindow = document.querySelector(".add-post");
 
 const defaultPost = {
     id: 0,
@@ -59,7 +59,20 @@ function likePost(id) {
 }
 renderAllPosts();
 
-function addNewPost() {
-    const addWindow = document.querySelector(".add-post")
+
+
+
+function showWindow() {
+
+    addWindow.style.display = "block";
+    addWindow.classList.add("shown");
+
+}
+
+function closeAddWindow() {
+
+    addWindow.style.display = "none";
+    addWindow.classList.remove("shown");
+
 }
 

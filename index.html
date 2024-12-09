@@ -22,14 +22,14 @@
             </div>
             <ul class="actions">
                 <li><i class="fa-regular fa-heart"></i></li>
-                <li><i class="fa-regular fa-square-plus" onclick="addNewPost()"></i></li>
+                <li><i class="fa-regular fa-square-plus" onclick="showWindow()" id="add-post"></i></li>
                 <li><i class="fa-regular fa-paper-plane"></i></li>
             </ul>
         </header>
         <div class="add-post">
             <div class="overlay"></div>
             <form action="">
-                <span class="close-button"><i class="fa-regular fa-solid fa-x" onclick="closeAddWindow"></i></span>
+                <span class="close-button"><i class="fa-regular fa-solid fa-x" onclick="closeAddWindow()"></i></span>
                 <h3>Add A New Post</h3>
                 <div>
                     <label for="post-img">Post Image</label>
@@ -39,7 +39,7 @@
                     <label for="desc-input">Post Description</label><br>
                     <textarea id="desc-input" name="desc" rows="10"></textarea>
                 </div>
-                <input type="submit" value="Post">
+                <input type="submit" value="Post" onclick="addNewPost()">
                 <input type="reset" value="reset">
             </form>
         </div>
