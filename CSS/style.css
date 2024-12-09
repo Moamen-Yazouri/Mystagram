@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: #2b2b2b;
+}
+.container {
+    position: relative;
+    max-width: 375px;
+    margin: 0 auto;
+    height: 95vh;
+    border: 1px solid #a3a3a3;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.container header {
+    border-bottom: 1px solid #dedede;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.container header .logo img {
+    height: 30px;
+}
+.container header .actions {
+    list-style: none;
+    display: flex;
+    column-gap: 10px;
+    font-size: 20px;
+
+}
+.container header .actions li{
+    cursor: pointer;
+}
+/* ----- Add post window------ */
+.container .overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(0 0 0 / 0.2);
+}
+.container .add-post { 
+    display: none;
+}
+.container form {
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #2b2b2b;
+    width: 85%;
+    height: 60vh;
+    z-index: 20;
+    text-align: center;
+}
+.container form .close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.container form > div {
+    text-align: center;
+}
+.container form h3 {
+    margin: 0px 0 10;
+    position: relative;
+    background: linear-gradient(to bottom, #dd0147, #f8a24b);
+    width: fit-content;
+    margin: 10px auto;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.container form input[type="text"] {
+    display: block;
+    margin: 5px auto 10px;
+    background-color: #eee;
+    border: 1px solid #777;
+    padding: 5px 10px;
+    /* border-radius: 5px; */
+}
+.container form textarea {
+    margin: 5px 0 10px;
+    background-color: #eee;
+    border: 1px solid #777;
+    padding: 5px 10px;
+}
+.container form input[type="text"]:focus,
+.container form textarea:focus {
+    outline: none;
+    border-color: transparent;
+}
+.container form input[type="submit"],
+.container form input[type="reset"] {
+    border: none;
+    padding: 5px 10px;
+    background: linear-gradient(to bottom, #dd0147, #f8a24b);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.container form input[type="reset"] {
+    background: black;
+    margin-left: 10px;
+}
+.container form input[type="submit"]:hover,
+.container form input[type="reset"]:hover {
+    transform: scale(1.1);
+}
+/* --------Posts Model---------- */
+.posts-list {
+    display: flex;
+    flex-direction: column;
+}
+.posts-list .post .header {
+    border-bottom: 1px solid #dedede;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.post .header .info {
+    display: flex;
+}
+.post .header .info .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-left: 10px;
+    row-gap: 2px;
+}
+.post .header .info .title span {
+    display: block;
+}
+.post .header .info .title .name {
+    font-size: 12px;
+    font-weight: bold;
+}
+.post .header .info .title .subtitle {
+    color: #3f3c3c;
+    font-size: 12px;
+}
+.post .header .info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: fill;
+}
+.post .header button {
+    all: unset;
+    font-size: 16px;
+    margin-right: 5px;
+}
+.post .likes-date {
+    padding: 0 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.post .likes-date .likes {
+    font-size: 15px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.post .likes-date .date {
+    font-size: 13px;
+    color: #777;
+}
+.post .content img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+.post .content p {
+    margin-top: 5px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+.post .content p a.hash {
+    text-decoration: none;
+    color: #274e8a;
+    font-weight: 600;
+}
+.post .actions {
+    list-style: none;
+    display: flex;
+    margin: 0 10px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    column-gap: 10px;
+}
+.post .actions li {
+    cursor: pointer;
+}
+
+.post .actions li:last-child {
+    margin-left: auto;
+}

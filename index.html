@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <!-- Awesome library -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/all.css">
+    <!-- Font File -->
+    <link rel="stylesheet" href="CSS/fonts.css">
+    <!-- Styling File -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="assets/MOCK_DATA.js"></script>
+    <title>mystagram</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="imgs/logo.png" alt="LOGO">
+            </div>
+            <ul class="actions">
+                <li><i class="fa-regular fa-heart"></i></li>
+                <li><i class="fa-regular fa-square-plus" onclick="addNewPost()"></i></li>
+                <li><i class="fa-regular fa-paper-plane"></i></li>
+            </ul>
+        </header>
+        <div class="add-post">
+            <div class="overlay"></div>
+            <form action="">
+                <span class="close-button"><i class="fa-regular fa-solid fa-x" onclick="closeAddWindow"></i></span>
+                <h3>Add A New Post</h3>
+                <div>
+                    <label for="post-img">Post Image</label>
+                    <input type="text" id="post-img">
+                </div>
+                <div>
+                    <label for="desc-input">Post Description</label><br>
+                    <textarea id="desc-input" name="desc" rows="10"></textarea>
+                </div>
+                <input type="submit" value="Post">
+                <input type="reset" value="reset">
+            </form>
+        </div>
+        <main class="posts-list">
+            <div class="post">
+                <div class="header">
+                    <div class="info">
+                    <profile-img><img src="imgs/avatar.jpg" alt=""></profile-img> 
+                    <div class="title">
+                        <span class="name">
+                            Moamen Al-Yazouri
+                        </span>
+                        <span class="subtitle">Front End Developer</span>
+                    </div>
+                    </div>
+                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+                <div class="content">
+                    <img src="imgs/post-image.jpg" alt="">
+                    <div class="likes-date">
+                        <div class="likes">922225 likes</div>
+                        <div class="date">08/08/2008</div>
+                    </div>
+                    <p>
+                        Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci'
+                        luctus et ultrices posuere
+                        cubilia Curae; Donec pharetra
+                        , magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis 
+                        sapien sapien non mi. Integer ac neque.    
+                        non quam nec dui luctus rutrum. Nulla tellus.
+                    </p>
+                </div>
+                <ul class="actions">
+                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li><i class="fa-regular fa-comment"></i></li>
+                    <li><i class="fa-regular fa-paper-plane"></i></li>
+                    <li><i class="fa-regular fa-bookmark"></i></li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+</html>
