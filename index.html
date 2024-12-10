@@ -39,46 +39,13 @@
                     <label for="desc-input">Post Description</label><br>
                     <textarea id="desc-input" name="desc" rows="10"></textarea>
                 </div>
-                <input type="submit" value="Post" onclick="addNewPost()">
+                <button type="button" onclick="addNewPost()">Post</button>
                 <input type="reset" value="reset">
             </form>
         </div>
         <main class="posts-list">
-            <div class="post">
-                <div class="header">
-                    <div class="info">
-                    <profile-img><img src="imgs/avatar.jpg" alt=""></profile-img> 
-                    <div class="title">
-                        <span class="name">
-                            Moamen Al-Yazouri
-                        </span>
-                        <span class="subtitle">Front End Developer</span>
-                    </div>
-                    </div>
-                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                </div>
-                <div class="content">
-                    <img src="imgs/post-image.jpg" alt="">
-                    <div class="likes-date">
-                        <div class="likes">922225 likes</div>
-                        <div class="date">08/08/2008</div>
-                    </div>
-                    <p>
-                        Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci'
-                        luctus et ultrices posuere
-                        cubilia Curae; Donec pharetra
-                        , magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis 
-                        sapien sapien non mi. Integer ac neque.    
-                        non quam nec dui luctus rutrum. Nulla tellus.
-                    </p>
-                </div>
-                <ul class="actions">
-                    <li><i class="fa-regular fa-heart"></i></li>
-                    <li><i class="fa-regular fa-comment"></i></li>
-                    <li><i class="fa-regular fa-paper-plane"></i></li>
-                    <li><i class="fa-regular fa-bookmark"></i></li>
-                </ul>
-            </div>
+            <div class="post"></div>
+                
         </main>
     </div>
     <script src="JS/script.js"></script>
